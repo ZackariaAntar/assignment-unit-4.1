@@ -54,16 +54,28 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
+let happy = []
 function getLast( array ) {
-
-}
+    let final = array[array.length-1];
+    return final;  
+  }
+  
+console.log(getLast(happy))
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
+let joyful = ['a','5','6','7','8']
 function find( value, array ){
-  
+  for (let item of array){
+    if (value === item){
+      return true;
+    }else 
+    return false;
+  }
 }
+
+console.log(find('a', joyful))
 
 // ----------------------
 // Stretch Goals
@@ -71,7 +83,12 @@ function find( value, array ){
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
-
+  for (let char of string){
+    if (letter === string[0]){
+      return true;
+    } else
+    return false;
+  } 
 }
 console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
