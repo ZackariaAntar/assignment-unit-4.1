@@ -93,6 +93,8 @@ function isFirstLetter(letter, string) {
 console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 
+
+
 // 9. Function to return the sum of all numbers in an array
 let cheery = [10,20,30]
 function sumAll( numArray ) {
@@ -105,12 +107,45 @@ function sumAll( numArray ) {
 }
 console.log(sumAll(cheery))
 
+
+
+
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
+
+function returnPos(inputArray){
+  let posArray = []
+  for (items of inputArray){
+    if (items > 0){
+      posArray.push(items)
+    }
+  }return posArray;
+}
+
+let testArray = [-1, -2, -3, -4, 5 , 6, -7]
+console.log("yippee", returnPos(testArray))
 
 
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it!
+//     
+//     https://edabit.com/challenge/bL7hSc6Zh4zZJzGmw
+//     This is a function that converts a persons age in years to their age in days.
+//     The function accepts one parameter and expects only positive integer input.
+//     The function performs a simple calculation inside of a variable by multiplying the input value by 365, and then returns the value stored in the variable. 
+
+console.log('Create a function that takes the age in years and returns the age in days.')
+
+function calcAge(age){
+  let days = age * 365;
+  return days;
+}
+
+console.log(`You are ${calcAge(29)} days old`)
+
+
+
+
