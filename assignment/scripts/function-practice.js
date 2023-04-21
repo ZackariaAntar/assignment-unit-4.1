@@ -124,7 +124,7 @@ function returnPos(inputArray){
 }
 
 let testArray = [-1, -2, -3, -4, 5 , 6, -7]
-console.log("yippee", returnPos(testArray))
+console.log(returnPos(testArray))
 
 
 
