@@ -9,7 +9,7 @@ function hello() {
   return 'Hello World!';
 }
 // Call the function to test
-console.log('Test - should say "Hello World!"', hello());
+console.log('Test - should say "Hello World!":', hello());
 
 
 // 2. Function to return an personalized hello, using the `name` argument.
@@ -18,6 +18,7 @@ function helloName( name ) {
   return `Hello, ${name}!`;
 }
 // Remember to call the function to test
+console.log("-Printing helloName('Zackaria'):")
 console.log(helloName('Zackaria'))
 
 // 3. Function to add two numbers together & return the result
@@ -25,6 +26,7 @@ function addNumbers( firstNumber, secondNumber) {
   let answer = firstNumber + secondNumber;
   return answer;
 }
+console.log('-Adding 9 and 10:')
 console.log(addNumbers(9 ,10));
 
 
@@ -34,6 +36,8 @@ function multiplyThree(num1, num2, num3 ){
   return answer;
 }
 
+
+console.log('-Multiplying 10 x 10 x 10:')
 console.log(multiplyThree(10, 10, 10))
 
 
@@ -47,20 +51,25 @@ function isPositive( number ) {
 }
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
-console.log( 'isPositive - should say true', isPositive(3) );
-console.log( 'isPositive - should say false', isPositive(0) );
-console.log( 'isPositive - should say false', isPositive(-3) );
+console.log( '-isPositive - should say true:', isPositive(3) );
+console.log( '-isPositive - should say false:', isPositive(0) );
+console.log( '-isPositive - should say false:', isPositive(-3) );
 
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
+let fun = ['a','b','c','d','woohoo!']
 let happy = []
 function getLast( array ) {
     let final = array[array.length-1];
     return final;  
   }
-  
+console.log("-Getting the last value from the fun array:")
+console.log(getLast(fun))
+console.log("-Getting the last value from the happpy array:")
 console.log(getLast(happy))
+
+
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
@@ -74,8 +83,10 @@ function find( value, array ){
     return false;
   }
 }
-
+console.log("-Expecting true if looking for 'a' in the joyful array:")
 console.log(find('a', joyful))
+console.log("-Expecting false if looking for 'woohoo!' in the joyful array:")
+console.log(find('woohoo!', joyful))
 
 // ----------------------
 // Stretch Goals
@@ -90,8 +101,8 @@ function isFirstLetter(letter, string) {
     return false;
   } 
 }
-console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
-console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
+console.log( '-isFirstLetter - should say true:', isFirstLetter('a', 'apple') );
+console.log( '-isFirstLetter - should say false:', isFirstLetter('z', 'apple') );
 
 
 
@@ -101,10 +112,10 @@ function sumAll( numArray ) {
   let sum = 0;
   for (num of numArray){
     sum = sum += num    
-  }
-  // TODO: loop to add items
-  return sum;
-}
+  }return sum;
+};
+
+console.log('-Sum of values in the cheery array:')
 console.log(sumAll(cheery))
 
 
@@ -124,7 +135,15 @@ function returnPos(inputArray){
 }
 
 let testArray = [-1, -2, -3, -4, 5 , 6, -7]
+let nextTest = [-1,-2,-3,-4,-5]
+console.log('-Positive numbers pulled from testArray:')
 console.log(returnPos(testArray))
+console.log('-This is testArray original:')
+console.log(testArray)
+console.log('-Positive numbers pulled from nextTest:')
+console.log(returnPos(nextTest))
+console.log('-This is nextTest original:')
+console.log(nextTest)
 
 
 
